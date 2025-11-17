@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Cleanup Script for Phase 1: Very Old Repositories
-# Deletes repositories identified in Phase 1 analysis
+# Cleanup Script for Inactive Repositories Since 2020
+# Deletes repositories not updated since 2020-12-31
 
 # Load token from .env
 if [ -f .env ]; then
@@ -13,15 +13,15 @@ if [ -z "$GITHUB_TOKEN" ]; then
     exit 1
 fi
 
-CANDIDATES_FILE="phase1_candidates.txt"
+CANDIDATES_FILE="inactive_2021_candidates.txt"
 
 if [ ! -f "$CANDIDATES_FILE" ]; then
     echo "Candidates file $CANDIDATES_FILE not found"
     exit 1
 fi
 
-echo "Phase 1 Repository Cleanup"
-echo "=========================="
+echo "Inactive Repositories Since 2020 Cleanup"
+echo "========================================"
 echo ""
 echo "The following repositories will be deleted:"
 echo ""
@@ -41,7 +41,7 @@ fi
 echo "Deleting repositories..."
 
 while read -r line; do
-    # Extract repo name from line like "- repo-name (Created: ..., Updated: ...)"
+    # Extract repo name from line like "- repo-name (Updated: ...)"
     repo_name=$(echo "$line" | sed 's/- \([^ ]*\) .*/\1/')
 
     if [ -n "$repo_name" ]; then
@@ -51,4 +51,4 @@ while read -r line; do
     fi
 done < "$CANDIDATES_FILE"
 
-echo "Phase 1 cleanup complete."
+echo "Inactive 2021 cleanup complete."

@@ -3,7 +3,7 @@
 // GitHub Repository Analyzer
 // Lists all repositories for an organization/user with creation and last updated dates
 
-$token = getenv('GITHUB_TOKEN') ?: readline('Enter your GitHub Personal Access Token: ');
+$token = getenv('GITHUB_REPO_READ') ?: getenv('GITHUB_TOKEN') ?: readline('Enter your GitHub Personal Access Token: ');
 $owner = 'ndestates'; // Change if needed
 
 $url = "https://api.github.com/users/$owner/repos?per_page=100&type=all";

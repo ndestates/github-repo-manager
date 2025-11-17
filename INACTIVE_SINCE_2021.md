@@ -1,0 +1,49 @@
+# Repositories Not Updated Since 2020-12-31
+
+Generated on: Mon Nov 17 10:04:21 GMT 2025
+
+## Summary
+
+- Total inactive repositories: 39
+
+## Inactive Repositories
+
+- craftcms-aws (Updated: 2020-12-17)
+- ndestates.com (Updated: 2020-10-06)
+- incline (Updated: 2020-12-29)
+- pleiadescms (Updated: 2020-10-09)
+- pleiades_tests (Updated: 2020-11-01)
+- uploads_start (Updated: 2020-10-06)
+- symfony4 (Updated: 2020-10-05)
+- forms-start (Updated: 2020-09-16)
+- ndev-newsite (Updated: 2020-09-25)
+- pleiades (Updated: 2020-09-18)
+- the_space_bar (Updated: 2020-09-16)
+- cauldron_doctrine (Updated: 2020-08-01)
+- pleiades44 (Updated: 2020-08-10)
+- cauldron_overflow (Updated: 2020-07-31)
+- sulucms (Updated: 2020-07-24)
+- react_project (Updated: 2020-07-18)
+- symfony5 (Updated: 2020-06-13)
+- concrete56.ndestates.net (Updated: 2020-05-30)
+- symfony (Updated: 2020-05-21)
+- my_properties (Updated: 2020-05-16)
+- dev2.ndlettings.com (Updated: 2020-04-18)
+- htdocs-ndedev25 (Updated: 2020-04-04)
+- htdocs-ndedev22 (Updated: 2020-03-20)
+- htdocs-ndedev20 (Updated: 2020-02-16)
+- my_boats-master (Updated: 2020-03-04)
+- htdocs (Updated: 2020-03-01)
+- home-page-master (Updated: 2020-03-09)
+- htdocs-nde (Updated: 2020-03-09)
+- nde-bootstrap (Updated: 2020-03-08)
+- facebook-ads (Updated: 2020-03-06)
+- iptables (Updated: 2020-03-05)
+- bootstrap-4.4.1 (Updated: 2020-02-23)
+- user-account (Updated: 2020-03-01)
+- book_viewing (Updated: 2020-01-29)
+- VoiceUserInterfacesProjects-master (Updated: 2020-02-02)
+- dialogflow_json (Updated: 2020-02-02)
+- RealEstate_v2 (Updated: 2020-01-30)
+- list_properties (Updated: 2020-01-27)
+- mail (Updated: 2020-01-19)
