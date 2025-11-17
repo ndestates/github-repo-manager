@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Cleanup Script for Phase 1: Very Old Repositories
+# Deletes repositories identified in Phase 1 analysis
+
+# Load token from .env
+if [ -f .env ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
+
+if [ -z "$GITHUB_TOKEN" ]; then
+    echo "GITHUB_TOKEN not found in .env"
+    exit 1
+fi
+
+CANDIDATES_FILE="phase1_candidates.txt"
+
+if [ ! -f "$CANDIDATES_FILE" ]; then
+    echo "Candidates file $CANDIDATES_FILE not found"
+    exit 1
+fi
+
+echo "Phase 1 Repository Cleanup"
+echo "=========================="
+echo ""
+echo "The following repositories will be deleted:"
+echo ""
+
+cat "$CANDIDATES_FILE"
+echo ""
+echo "Total: $(wc -l < "$CANDIDATES_FILE") repositories"
+echo ""
+
+read -p "Do you want to proceed with deletion? (yes/no): " confirm
+
+if [ "$confirm" != "yes" ]; then
+    echo "Aborted."
+    exit 0
+fi
+
+echo "Deleting repositories..."
+
+while read -r line; do
+    # Extract repo name from line like "- repo-name (Created: ..., Updated: ...)"
+    repo_name=$(echo "$line" | sed 's/- \([^ ]*\) .*/\1/')
+
+    if [ -n "$repo_name" ]; then
+        echo "Deleting ndestates/$repo_name..."
+        gh repo delete "ndestates/$repo_name" --confirm
+        sleep 2  # Rate limit
+    fi
+done < "$CANDIDATES_FILE"
+
+echo "Phase 1 cleanup complete."

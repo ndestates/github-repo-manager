@@ -1,0 +1,32 @@
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Generated data files (uncomment if you want to ignore)
+# repos.json
+# phase1_candidates.txt
+# *_ANALYSIS.md
+
+# Public directory (if used for builds)
+# public/
